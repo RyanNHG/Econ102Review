@@ -1,0 +1,103 @@
+/*GLOBAL*/
+body {
+  margin: 0;
+  font-family: Arial;
+  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.left {
+  flex: 1;
+}
+
+a:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+p > i.fa {
+  padding-right: .5rem;
+}
+
+body * {
+  display: flex;
+}
+
+/*CUSTOM ICONS*/
+.ryan-icon {
+    background-color: rgb(51, 51, 51);
+    color: rgb(255, 255, 255);
+    border-radius: 25px;
+    height: 25px;
+    width: 25px;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/*RESPONSIVE*/
+@media (max-width: 900px) {
+
+  .hide-small {
+    display: none;
+  }
+
+}
+
+/*NAVBAR*/
+
+.navbar {
+  overflow: auto;
+  height: 50px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px #333;
+}
+
+.home-link img {
+  height: inherit;
+  margin-right: 1rem;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-link{
+  padding: 0 1rem;
+  height: 50px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-link.active {
+  cursor: default;
+  background-color: #ccc;
+}
+
+.nav-link:hover {
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+.nav-links > li > i.fa {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding-right: .5rem;
+}
+
+/*PLACEHOLDER*/
+.placeholder {
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  flex: 1;
+  justify-content: center;
+}
