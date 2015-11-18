@@ -6,6 +6,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  min-width: 420px;
 }
 
 .left {
@@ -46,15 +47,20 @@ body * {
     display: none;
   }
 
+  .nav-link i {
+    margin: 0;
+  }
+
 }
 
 /*NAVBAR*/
 
 .navbar {
-  overflow: auto;
+  overflow: hidden;
   height: 50px;
   background-color: #fff;
   box-shadow: 0 2px 10px #333;
+  z-index: 1;
 }
 
 .home-link img {
@@ -93,6 +99,12 @@ body * {
     padding-right: .5rem;
 }
 
+/*PAGE*/
+.page {
+  flex: 1;
+  justify-content: center;
+}
+
 /*PLACEHOLDER*/
 .placeholder {
   flex-direction: column;
@@ -100,4 +112,83 @@ body * {
   color: #333;
   flex: 1;
   justify-content: center;
+  display: none;
 }
+
+.placeholder > p > i.fa {
+  padding-left: .5rem;
+}
+
+/*QUESTION PANEL*/
+
+.panel {
+  flex-direction: column;
+  flex: 1;
+  background-color: #ccc;
+  width: 85%;
+  max-width: 768px;
+  padding: 1rem;
+}
+
+.question {
+  background-color: #069;
+  margin: 0;
+  color: white;
+  padding: 1rem 0.5rem;
+}
+
+.answers {
+  flex-direction: column;
+  padding: 1rem 0 0;
+  margin: 0;
+}
+
+.answer {
+  background-color: white;
+  cursor: pointer;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.answer.active,
+.answer.active:hover {
+  color: white;
+  font-weight: bold;
+  background-color: #c00;
+}
+
+.answer.active.correct {
+  background-color: #0a0;
+}
+
+.answer:hover, 
+.buttons > button:hover {
+  background-color: #333;
+  color: white;
+}
+
+.buttons {
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons > button {
+  flex: 1 1 0%;
+  border: medium none;
+  padding: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  background-color: white;
+}
+
+.buttons > button.back {
+  margin-right: .5rem;
+}
+
+.buttons > button.next {
+  margin-left: .5rem;
+}
+
+
